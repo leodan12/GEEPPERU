@@ -150,7 +150,7 @@
                             <ul id="nav" class="sf-menu">
                                 <li class="nav-icon-hi current_page_item">
                                     <a href="index.html">
-                                        Inicio
+                                        Inicio312
                                         <div style="position:absolute; left: 50%;">
                                             <span class="triangle">&nbsp;</span>
                                         </div>
