@@ -563,54 +563,47 @@
         <!-- START PRIMARY -->
  
  
-        <p>&nbsp;</p>
-        <p>
-        <div class="row box-title">
-            <div class="span5">
-                <div class="border-line"></div>
-            </div>
-
-            <h3 class="span2">Random numbers</h3>
-
-            <div class="span5">
-                <div class="border-line"></div>
-            </div>
-        </div>
+        <p>&nbsp;</p> 
+         
 
 
         <div class="one-fourth ">
-            <div class="random-numbers">
+            <div class="nuestros-servicios"  >
+                <img src="{{ asset('images/25.jpg') }}"   alt="" width="52" height="52" />
+                <br>
+                <span class="servicio"> ALTA CALIDAD</span>
+                <p>Contamos con la mejor tecnología nacional e internacional</p>
+               
+            </div>
+        </div>
+
+        <div class="one-fourth ">
+            <div class="nuestros-servicios" >
                 <img src="{{ asset('images/110.jpg') }}" alt="" width="52" height="52" />
-                <p>satisfied customers</p>
-                <span class="number">1590</span>
+                <br>
+                <span class="servicio"> SOPORTE ONLINE</span>
+                <p>Contamos con personal profesional para ayudarlo</p>
             </div>
         </div>
 
         <div class="one-fourth ">
-            <div class="random-numbers">
-                <img src="{{ asset('images/25.jpg') }}" alt="" width="52" height="52" />
-                <p>Freelance projects</p>
-                <span class="number">65</span>
-            </div>
-        </div>
-
-        <div class="one-fourth ">
-            <div class="random-numbers">
+            <div class="nuestros-servicios">
                 <img src="{{ asset('images/31.jpg') }}" alt="" width="52" height="52" />
-                <p>sales on themeforest</p>
-                <span class="number">12.845</span>
+                <br>
+                <span class="servicio"> LLEGAMOS A TU CASA</span>
+                <p>Te protegemos!, por eso llegamos hasta la puerta de tu casa</p>
             </div>
         </div>
 
         <div class="one-fourth last">
-            <div class="random-numbers">
+            <div class="nuestros-servicios">
                 <img src="{{ asset('images/41.jpg') }}" alt="" width="52" height="52" />
-                <p>...Weekly Coffee!</p>
-                <span class="number">36</span>
+                <br>
+                <span class="servicio"> GARANTIA</span>
+                <p >Todos nuestros productos y servicios están garantizados</p>
             </div>
         </div>
-        <p>&nbsp;</p>
-        <p>
+         
         <div class="row box-title">
             <div class="span5">
                 <div class="border-line"></div>
@@ -622,112 +615,61 @@
                 <div class="border-line"></div>
             </div>
         </div>
-        <div class="row">
-            <div>
-                <div class="widget-first widget span3 recent-posts">
-                    <h3>From my blog</h3>
-                    <div class="recent-post">
-                        <div class="post type-post status-publish format-gallery hentry category-web-design group">
-
-                            <div class="date">
-                                <span class="month">Oct</span>
-                                <span class="day">8</span>
-                            </div>
-
-                            <div class="text">
-                                <h3>
-                                    <a href="blog-detail.html" title="This is the title of the first article. Enjoy it.">
-                                        This is the title of the first article. Enjoy it.
-                                    </a>
-                                </h3>
-                                <p>by
-                                    <a href="author-celestino.html" title="Posts by celestino" rel="author">
-                                        celestino
-                                    </a> -
-
-                                    <a href="blog-detail.html#respond" title="Comment on This is the title of the first article. Enjoy it.">
-                                        0 comments
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="post type-post status-publish format-standard hentry category-elegant-vintage group">
-
-                            <div class="date">
-                                <span class="month">Sep</span>
-                                <span class="day">12</span>
-                            </div>
-
-                            <div class="text">
-                                <h3>
-                                    <a href="#" title="Nice &amp; Clean. The best for your blog!">
-                                        Nice &amp; Clean. The best for your blog!
-                                    </a>
-                                </h3>
-
-                                <p>by
-                                    <a href="#" title="Posts by celestino" rel="author">
-                                        celestino
-                                    </a> -
-                                    <a href="#" title="Comment on Nice &amp; Clean. The best for your blog!">
-                                        0 comments
-                                    </a>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget span3 widget_flickrRSS">
-                    <h3>My Flickr</h3>
-
-                    <a title="1P4B6832" href="http://www.flickr.com/photos/gordonkw41/8756237357/"><img alt="1P4B6832" src="http://farm9.staticflickr.com/8553/8756237357_32d559d451_s.jpg"></a>
-                    <a title="DSC03253" href="http://www.flickr.com/photos/dovz/8756237387/"><img alt="DSC03253" src="http://farm8.staticflickr.com/7422/8756237387_1c3013358d_s.jpg"></a>
-                     <a title="P1000624" href="http://www.flickr.com/photos/24690780@N02/8756237421/"><img alt="P1000624" src="http://farm9.staticflickr.com/8393/8756237421_43de542797_s.jpg"></a>
-                   </div>
-                <div  class="widget span3 contact-info">
-                    <h3>Get in touch</h3>
-                    <div class="sidebar-nav">
-                        <ul>
-                            <li>
-                                <i class="icon-map-marker" style="color:#000;font-size:12px;width:12px;height:12px"></i>
-                                <span>Address:</span> Celestino, 115 Avenue - Italy
-                            </li>
-                            <li>
-                                <i class="icon-phone" style="color:#000;font-size:12px;width:12px;height:12px"></i>
-                                <span>Mobile:</span> +39 3471717174
-                            </li>
-                            <li>
-                                <i class="icon-print" style="color:#000;font-size:12px;width:12px;height:12px"></i>
-                                <span>Fax:</span> +39 0035 356 765
-                            </li>
-                            <li>
-                                <i class="icon-envelope" style="color:#000;font-size:12px;width:12px;height:12px"></i>
-                                <span>Email:</span> celestino@yit.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="last-tweets-2" class=" widget span3 last-tweets">
-                    <h3>Last Tweets</h3>
-                    <div class="list-tweets-2">
-
-                    </div>
-<!-- 
-                    <script type="text/javascript">
-                        jQuery(function($){
-                            $('#last-tweets-2 .list-tweets-2').tweetable({
-                                listClass: 'tweets-widget-2',
-                                username: 'envato',
-                                time: true,
-                                limit: 2,
-                                replies: true
-                            });
-                        });
-                    </script>-->
-                </div>
+        
+        <div class="one-fourth ">
+            <div class="sobre-nosotros">
+                
+                <span class="nosotros"> ¿PORQUE ELEGIRNOS?</span>
+                <ul>
+                    <li> <a href="#">Nuestra Empresa </a> </li>
+                    <li><a href="#">Nuestra Trayectoria</a></li>
+                    <li><a href="#">Nuestras Distinciones</a></li>
+                    <li><a href="#">Nuestros Principios</a></li>
+                </ul>
             </div>
         </div>
+        <div class="one-fourth ">
+            <div class="sobre-nosotros">
+                
+                <span class="nosotros"> POLITICAS</span>
+                <ul>
+                    <li> <a href="#">Politica de Devoluciones </a> </li>
+                    <li><a href="#">Politica de Privacidad</a></li>
+                    <li><a href="#">Politicas Comerciales</a></li>
+                    <li><a href="#">Politica de Darantias</a></li>
+                    <li><a href="#">Politica de Envios</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="one-fourth ">
+            <div class="sobre-nosotros">
+                
+                <span class="nosotros"> SERVICIOS</span>
+                <ul>
+                    <li> <a href="#">Soporte </a> </li>
+                    <li><a href="#">Ventas Tienda</a></li>
+                    <li><a href="#">Ventas Online</a></li>
+                    <li><a href="#">Reclamaciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="one-fourth last">
+            <div class="sobre-nosotros">
+                
+                <span class="nosotros"> CONTACTANOS!</span>
+                <p>Con gusto nuestros ejecutivos especializados atenderán tus dudas, recibirán tus comentarios.</p>
+                <ul class="datos">
+                    <li > <a href="">Jirón Francisco Pizarro 203, Trujillo</a></li>
+                    <li> <a href="">936108792</a></li>
+                    <li><a href="">ventas@geepperu.com</a></li>
+                </ul>
+                
+
+            </div>
+        </div>
+        
+         
+        
     </div>
 </div>
 <!-- END FOOTER -->

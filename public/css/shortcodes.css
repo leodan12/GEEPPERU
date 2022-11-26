@@ -2134,29 +2134,69 @@ ul.the-icons li {
 	display: inline;
 }
 /* random_numbers */
-.random-numbers{
+.nuestros-servicios{
+    text-align: center;
 	width: 195px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
-.random-numbers img {
-	float: left;
+.nuestros-servicios img {
+	top:0px;
 	width: 52px;
 	height: 52px;
+    border-radius: 30px;
+    margin-bottom: 10px;
 }
-.random-numbers p {
-	margin-top: 0px;
-	margin-left: 64px;
-	margin-bottom: 14px;
-	line-height: 1em;
+.nuestros-servicios img:hover {
+    color: red;
 }
-.random-numbers span.number {
-	margin-left: 12px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 30px;
-	color: #a2a0a0;
+.nuestros-servicios p {
+	margin-top: 5px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+	color: #a2a0a0b7; 
+    font-size: 12px;
 }
+.nuestros-servicios span.servicio {  
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+	font-size: 12px;
+	color: #b1adad;
+}
+.nuestros-servicios span.servicio:hover {
+    color: red;
+  }
+
+  .sobre-nosotros{
+    text-align: left;
+	width: 195px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+.sobre-nosotros span.nosotros {  
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+	font-size: 14px;
+	color: #b1adad;
+}
+.sobre-nosotros p {
+	margin-top: 0px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;
+    width: 210px;
+	color: #a2a0a0b7; 
+    font-size: 10px;
+}
+.sobre-nosotros ul.datos {
+    list-style-type: none;
+    font-size: 8px;
+    margin: 0px;
+    padding: 0px;
+  }
+.sobre-nosotros ul.li::before { 
+    margin: 0px;
+     padding: 0px;
+    }
 /* recent post */
 .recent-post p,
 .recent-post span,
