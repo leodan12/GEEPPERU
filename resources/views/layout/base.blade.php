@@ -5,39 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap 5-->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- bootstrap 5-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <!--  iconos de fontawesome-->
     <script src="https://kit.fontawesome.com/a411db0add.js" crossorigin="anonymous"></script>
 
- 
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
     <link href="{{ asset('miestilo.css') }}" rel="stylesheet" type="text/css" />
-    <!-- script para el chatbot 
-    <script async>
-        (function(w, d) {
-            var h = d.head || d.getElementsByTagName("head")[0];
-            var s = d.createElement("script");
-            s.setAttribute("type", "text/javascript");
-            s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/c3276dc9775913859eafadf202459571");
-            h.appendChild(s);
-        })(window, document);
-    </script>-->
+	 
+    <!--end::Page Vendor Stylesheets-->
+	<!--begin::Global Stylesheets Bundle(used by all pages)-->
+	<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+	<script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
+	<script src="{{ asset('js/scripts.bundle.js') }}"></script>
 
-
-    <!-- script para el chatbot
-
-    <link href="https://trial.chatcompose.com/static/trial/all/global/export/css/main.5b1bd1fd.css" rel="stylesheet">    
-    <script async type="text/javascript" src="https://trial.chatcompose.com/static/trial/all/global/export/js/main.a7059cb5.js?user=trial_leodan&lang=ES" user="trial_leodan" lang="ES"></script>  
- -->
-
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	
+	@yield('page-info')
+	
     <title>GEEPPERU</title>
 
 
 </head>
 
-<body>
+<body id="kt_body"    class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 
     <nav id="menu">
         <!-- start menu -->
@@ -51,10 +50,10 @@
             <li id="direccion">
                 <a href="mailto:@ventas@geepperu.com"> &nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> ventas@geepperu.com</a>
             </li>
-            <li  style="float:right">
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li style="float:right">
+                &nbsp;&nbsp;&nbsp;&nbsp;
             </li>
-            <li  style="float:right">
+            <li style="float:right">
                 <a> &nbsp;&nbsp;
                     Mi Cuenta▼
                 </a>
@@ -72,8 +71,8 @@
             </li>
 
 
-            
-           
+
+
 
 
         </ul>
@@ -87,8 +86,8 @@
             <img src="{{ asset('imgs/geepperu2.png') }}" title="geepperu" alt="geepperu" />
         </a>
 
-        <ul >
-            <li id="inicioN"  >
+        <ul>
+            <li id="inicioN">
                 <a href="/">&nbsp;&nbsp; INICIO</a>
             </li>
 
@@ -145,12 +144,11 @@
 
     </nav>
 
-    <div class="container">
-        <!-- SLOGAN -->
+    <div class="container ">
 
         @yield('content')
-    </div>
 
+    </div>
     <!-- START FOOTER -->
     <div id="servicios">
         <br>
@@ -306,12 +304,7 @@
     <!--  js de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="{{ asset('jsgeep/nav.js') }}"></script>
-    <script>
-
-    </script>
+   
     @yield('script')
 </body>
 
