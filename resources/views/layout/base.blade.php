@@ -127,7 +127,7 @@
                 <a href="">&nbsp;&nbsp; OFERTAS</a>
             </li>
             <li id="contact">
-                <a href="">&nbsp;&nbsp; CONTACTANOS</a>
+                <a href="/contactanos">&nbsp;&nbsp; CONTACTANOS</a>
             </li>
             <li>
                 <a>&nbsp;&nbsp;
@@ -247,16 +247,16 @@
                     <br>
                     <h6> SERVICIOS</h6>
                     <ul>
-                        <a href="#">
+                        <a href="/contactanos">
                             <li> Soporte </li>
                         </a>
-                        <a href="#">
+                        <a href="/contactanos">
                             <li> Ventas Tienda</li>
                         </a>
-                        <a href="#">
+                        <a href="/contactanos">
                             <li> Ventas Online </li>
                         </a>
-                        <a href="#">
+                        <a href="/contactanos">
                             <li> Reclamaciones </li>
                         </a>
                         <a href="/preguntasfrecuentes">
@@ -270,12 +270,12 @@
                     <p> Con gusto nuestros ejecutivos especializados atenderán tus dudas, recibirán tus comentarios.</p>
 
                     <ul style="list-style-type: none;">
-                        <a href="">
+                        <a href="https://www.google.com/maps/place/GEEP+PERU+SRL/@-8.114465,-79.0307253,19z/data=!3m1!4b1!4m5!3m4!1s0x91ad3d120d07dfbf:0xf5641a979fb99073!8m2!3d-8.1144663!4d-79.0301781">
                             <li> <i class="fa-solid fa-location-dot"></i>Jirón Francisco Pizarro 203, Trujillo </li>
                         </a>
-                        <a href="">
+                        <a href="tel:+51936108792">
                             <li> <i class="fa-solid fa-phone"></i>936108792</li>
-                        </a>
+                        </a> 
                         <a href="">
                             <li> <i class="fa-solid fa-envelope"></i>ventas@geepperu.com </li>
                         </a>

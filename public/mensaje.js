@@ -43,4 +43,16 @@ function mensaje(resp) {
             icon: "error"
         });
     }
+    else if (resp == '6') {
+        Swal.fire({
+            text: "Consulta enviada",
+            icon: "success"
+        });
+    }
+    else if (resp == '-6') {
+        Swal.fire({
+            text: "error al enviar consulta",
+            icon: "error"
+        });
+    }
 }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PreguntasController;
+use App\Http\Controllers\ContactanosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::view('/trayectoria', 'nosotros.nuestratrayectoria');
 Route::view('/principios', 'nosotros.principios');
 Route::view('/preguntasfrecuentes', 'nosotros.preguntasfrecuentes');
 Route::get('/preguntasfrecuentes', [PreguntasController::class, 'index'])->name('preguntas.index');
-Route::view('/contactanos', 'nosotros.contactanos');
+Route::view('/contactanos', 'nosotros.contacto.contactanos');
 
 //gestionar los preguntas
 Route::get('/pregunta/create',[PreguntasController::class,'create']);
@@ -40,4 +41,11 @@ Route::post('/pregunta/update/{id}', [PreguntasController::class, 'update']);//R
 Route::get('/pregunta/{id}/delete', [PreguntasController::class, 'destroy']);//Actualizar
 
 Route::get('/deletedetallepregunta/{id}', [PreguntasController::class, 'destroydetallepregunta']); //eliminar detalle pregunta
+
+//gestionar los preguntas
+Route::post('/contactanos/store', [ContactanosController::class, 'store']);//Registrar
+Route::get('/contactanos/index', [ContactanosController::class, 'index']);//Registrar
+Route::get('/contactanos/{id}/edit', [ContactanosController::class, 'edit']);//Actualizar
+Route::post('/contactanos/update/{id}', [ContactanosController::class, 'update']);//Registrar
+Route::get('/contactanos/{id}/delete', [ContactanosController::class, 'destroy']);//Actualizar
 
