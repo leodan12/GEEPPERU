@@ -9,6 +9,7 @@ use App\Models\Respuestas;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 
+
 class PreguntasController extends Controller
 {
     /**
@@ -43,10 +44,8 @@ class PreguntasController extends Controller
     }
 
     public function create()
-    {
-        
+    { 
 
-        
         return view("nosotros/pregunta/create" );
     }
 

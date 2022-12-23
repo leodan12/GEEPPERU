@@ -5,7 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\PreguntasController;
 use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CotizacionesController;
-
+use App\Http\Controllers\PdfController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +51,7 @@ Route::post('/contactanos/update/{id}', [ContactanosController::class, 'update']
 Route::get('/contactanos/{id}/delete', [ContactanosController::class, 'destroy']);//Actualizar
 
 //gestionar las cotizaciones
+Route::get('/cotizacion/create',[CotizacionesController::class,'create']);
 Route::post('/cotizacion/store', [CotizacionesController::class, 'store']);//Registrar
 Route::get('/cotizacion/index', [CotizacionesController::class, 'index']);//Registrar
 Route::get('/cotizacion/{id}/edit', [CotizacionesController::class, 'edit']);//Actualizar
@@ -58,4 +59,4 @@ Route::post('/cotizacion/update/{id}', [CotizacionesController::class, 'update']
 Route::get('/cotizacion/{id}/delete', [CotizacionesController::class, 'destroy']);//Actualizar
 Route::get('/cotizacion/show/{id}', [CotizacionesController::class, 'show']);//ver
 
-Route::get('/generarcotizacionpdf/{id}', [CotizacionesController::class, 'generar cotizacion']);//ver
+Route::get('/generarcotizacionpdf/{id}', [PdfController::class, 'cotizacion']);//ver

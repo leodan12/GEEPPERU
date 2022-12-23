@@ -28,7 +28,7 @@
 <div  >
     <div class="row">
         
-        <div class="d-flex justify-content-end mb-2" data-kt-docs-table-toolbar="base">
+        <div class="d-flex justify-content-end mb-5" data-kt-docs-table-toolbar="base">
             <a href="{{url('cotizacion/create')}}" class="btn btn-primary">
                 <span class="svg-icon svg-icon-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
@@ -212,7 +212,7 @@
      
     listarOnTable(table, cotizaciones, 0, [], viewbtn, editbtn, deletetn, urlcotizaciones, false, []);
 
-    $('#generarboleta').click(function() {
+    $('#generarcotizacion').click(function() {
 
         window.open( '/generarcotizacionpdf/' + idcotizacion );
 
