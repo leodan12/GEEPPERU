@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PreguntasController;
 use App\Http\Controllers\ContactanosController;
+use App\Http\Controllers\CotizacionesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,7 @@ Route::view('/contactanos', 'nosotros.contacto.contactanos');
 Route::get('/pregunta/create',[PreguntasController::class,'create']);
 Route::post('/pregunta/store', [PreguntasController::class, 'store']);//Registrar
 Route::get('/pregunta/index',[PreguntasController::class,'lista']);
-Route::get('/pregunta/show/{id}', [PreguntasController::class, 'show']);//ver
+//Route::get('/pregunta/show/{id}', [PreguntasController::class, 'show']);//ver
 Route::get('/pregunta/{id}/edit', [PreguntasController::class, 'edit']);//Actualizar
 Route::post('/pregunta/update/{id}', [PreguntasController::class, 'update']);//Registrar
 Route::get('/pregunta/{id}/delete', [PreguntasController::class, 'destroy']);//Actualizar
@@ -49,3 +50,12 @@ Route::get('/contactanos/{id}/edit', [ContactanosController::class, 'edit']);//A
 Route::post('/contactanos/update/{id}', [ContactanosController::class, 'update']);//Registrar
 Route::get('/contactanos/{id}/delete', [ContactanosController::class, 'destroy']);//Actualizar
 
+//gestionar las cotizaciones
+Route::post('/cotizacion/store', [CotizacionesController::class, 'store']);//Registrar
+Route::get('/cotizacion/index', [CotizacionesController::class, 'index']);//Registrar
+Route::get('/cotizacion/{id}/edit', [CotizacionesController::class, 'edit']);//Actualizar
+Route::post('/cotizacion/update/{id}', [CotizacionesController::class, 'update']);//Registrar
+Route::get('/cotizacion/{id}/delete', [CotizacionesController::class, 'destroy']);//Actualizar
+Route::get('/cotizacion/show/{id}', [CotizacionesController::class, 'show']);//ver
+
+Route::get('/generarcotizacionpdf/{id}', [CotizacionesController::class, 'generar cotizacion']);//ver

@@ -70,8 +70,8 @@
                         <th class="w-80px">Apellidos</th>  
                         <th class="w-80px">Email</th>  
                         <th class="w-80px">Celular</th> 
-                        <th class="w-80px">Servicio</th> 
-                        <th class="w-80px">Asunto</th>  
+                        <th class="w-80px">Asunto</th> 
+                        <th class="w-80px">Servicio</th>  
                         <th class="w-80px">Comentario</th>
                         <th class="w-80px">Acciones</th>
                     </tr>

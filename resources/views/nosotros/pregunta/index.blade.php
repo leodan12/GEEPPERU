@@ -103,7 +103,7 @@
     var urlpreguntas = "{{ url('pregunta') }}";
 
 
-    var table = defineTable($('#listado'), [], [0, 1 ], 'preguntas', function() {}, true, true, false);
+    var table = defineTable($('#listado'), [], [0, 1 ], 'preguntas', function() {}, false, false, false);
 
     $('#buscador').keyup(function(e) {
         table.search(e.target.value).draw();

@@ -11,7 +11,7 @@
         </div>
         <div class="p-4">
             <div class="rounded border p-10">
-                <Form method="POST" action="{{ url('consultas/update',$consulta->id) }}">
+                <Form method="POST" action="{{ url('contactanos/update',$consulta->id) }}">
                     @csrf
                     <div class="row">
                         <div class="col-sm-6 col-lg-6 mb-5">
@@ -35,12 +35,11 @@
                         
                         <div class="col-sm-6 col-lg-4 mb-5">
                             <label for="rol_id" class="required form-label">Servicio </label>
-                            <select class="required form-select" name="servicio" id="servicio">
-                                <option selected disabled>Seleccione un Servicio</option>
-                               
-                                <option   value="VENTAS EN LINEA">VENTAS EN TIENDA</option>
-                                <option   value="VENTAS EN TIENDA">VENTAS EN TIENDA</option>
-                                <option   value="SERVICIO TECNICO">SERVIVIO TECNICO</option>
+                            <select class="required form-select" name="servicio" id="servicio" required>
+                                <option  disabled>Seleccione un Servicio</option>
+                                 <option   value="VENTAS ONLINE" {{"VENTAS ONLINE" == $consulta->asunto ? 'selected':''}}>VENTAS ONLINE</option>
+                                <option   value="VENTAS TIENDA" {{"VENTAS TIENDA" == $consulta->servicio ? 'selected':''}}>VENTAS TIENDA</option>
+                                <option   value="SOPORTE TECNICO"{{"SOPORTE TECNICO" == $consulta->servicio ? 'selected':''}}>SOPORTE TECNICO</option>
                                  
                             </select>
                         </div>
@@ -50,23 +49,24 @@
                         </div>
                         <div class="col-sm-6 col-lg-4 mb-5">
                             <label for="estado" class="required form-label">Estado </label>
-                            <select class="required form-select" name="estado" id="estado">
-                                <option selected disabled>Seleccione Estado</option>
+                            <select class="required form-select" name="estado" id="estado" required>
+                                <option   disabled>Seleccione Estado</option>
                                 
                                 <option selected value="POR REVOLVER">POR RESOLVER</option>
+                                <option   value="RESPONDIDO">RESPONDIDO</option>
                                 <option   value="RESUELTO">RESUELTO</option>
                                  
                             </select>
                         </div>
                         <div class="col-sm-12 col-lg-12 mb-5">
                         <label for="comentario" class="form-label" required>Comentario</label>
-                        <textarea name="comentario" id="comentario" rows="5" cols="50" class="form-control" placeholder="Escribe un comentario detallando tu consulta" value="{{$consulta->comentario}}"></textarea>
+                        <textarea name="comentario" id="comentario" rows="5" cols="50" class="form-control" placeholder="Escribe un comentario detallando tu consulta" required>{{$consulta->comentario}}</textarea>
                     </div>
                     </div>
 
                     <button type="submit" class="btn btn-primary">
                         <i class="far fa-check-circle"></i>
-                        Aceptar
+                        Actualizar
                     </button>
                     <a href="{{url('contactanos/index')}}" type="button" class="btn btn-light">
                         <i class="fas fa-arrow-left"></i>

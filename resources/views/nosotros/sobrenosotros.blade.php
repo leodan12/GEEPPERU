@@ -49,7 +49,7 @@
     <div class="col-lg-6">
         <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fgeepperuoficial%2Fvideos%2F1218044658958906%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
         <br>
-        <h4>Ubicanos!</h4>
+        <h4>Ubícanos!</h4>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.4681187384631!2d-79.03072527086803!3d-8.114464971956897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d120d07dfbf%3A0xf5641a979fb99073!2sGEEP%20PERU%20SRL!5e0!3m2!1sen!2spe!4v1670252384822!5m2!1sen!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 

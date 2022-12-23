@@ -11,7 +11,7 @@
         <hr>
         <div class="row">
             @foreach($products as $pro)
-            <div class="col col-lg-4">
+            <div class="col col-lg-3">
                 <div class="card" style="margin-bottom: 20px; height: auto;">
                     <img src="/images/{{ $pro->image_path }}" class="card-img-top mx-auto" style="height: 150px; width: 150px;display: block;" alt="{{ $pro->image_path }}">
                     <div class="card-body">

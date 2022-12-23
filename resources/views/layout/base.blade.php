@@ -93,7 +93,7 @@
 
             <li>
                 <a>&nbsp;&nbsp;
-                    CATEGORIAS
+                    CATEGORÍAS
                 </a>
                 <ul id="optionmenu">
                     <li><a href="#">PC DE ESCRITORIO</a></li>
@@ -127,7 +127,7 @@
                 <a href="">&nbsp;&nbsp; OFERTAS</a>
             </li>
             <li id="contact">
-                <a href="/contactanos">&nbsp;&nbsp; CONTACTANOS</a>
+                <a href="/contactanos">&nbsp;&nbsp; CONTÁCTANOS</a>
             </li>
             <li>
                 <a>&nbsp;&nbsp;
@@ -183,7 +183,7 @@
                     <ul>
                         <i class="fa-solid fa-user-shield"></i>
                         <br>
-                        <h6>Garantia</h6>
+                        <h6>Garantía</h6>
                         <p>Todos nuestros productos y servicios están garantizados</p>
                     </ul>
                 </div>
@@ -224,22 +224,22 @@
                 </div>
                 <div class="col col-xs-6 col-md-3 col-sm-4  ">
                     <br>
-                    <h6> POLITICAS</h6>
+                    <h6> POLÍTICAS</h6>
                     <ul>
                         <a href="#">
-                            <li> Politica de Devoluciones </li>
+                            <li> Política de Devoluciones </li>
                         </a>
                         <a href="#">
-                            <li> Politica de Privacidad </li>
+                            <li> Política de Privacidad </li>
                         </a>
                         <a href="#">
-                            <li> Politicas Comerciales </li>
+                            <li> Política Comerciales </li>
                         </a>
                         <a href="#">
-                            <li> Politica de Darantias </li>
+                            <li> Política de Darantias </li>
                         </a>
                         <a href="#">
-                            <li> Politica de Envios </li>
+                            <li> Política de Envios </li>
                         </a>
                     </ul>
                 </div>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="col col-xs-6 col-md-3 col-sm-4  ">
                     <br>
-                    <h6> CONTACTANOS!</h6>
+                    <h6> CONTÁCTANOS!</h6>
                     <p> Con gusto nuestros ejecutivos especializados atenderán tus dudas, recibirán tus comentarios.</p>
 
                     <ul style="list-style-type: none;">

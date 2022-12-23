@@ -7,7 +7,7 @@
 <br>
 <div class="row justify-content-center">
     <div class="col">
-        <h5>CONTACTANOS!</h5>
+        <h5>CONTÁCTANOS!</h5>
     </div>
 </div>
 <br>
@@ -69,13 +69,13 @@
                     </div>
                     <div class="col-sm-12 col-lg-12 mb-5">
                         <label for="comentario" class="form-label" required>Comentario</label>
-                        <textarea name="comentario" id="comentario" rows="5" cols="50" class="form-control" placeholder="Escribe un comentario detallando tu consulta"></textarea>
+                        <textarea name="comentario" id="comentario" rows="5" cols="50" class="form-control" placeholder="Escribe un comentario detallando tu consulta" required></textarea>
                     </div>
 
                 </div>
                 <div class="row" style="text-align: left">
                     <div class="col-12">
-                        <button type="submit" value="Guardar" id="Guardar" class="btn btn-primary"><i class="fas fa-save"> </i>&nbsp;Enviar Consulta</button>
+                        <button type="submit" value="Guardar" id="Guardar" class="btn btn-success"><i class="fas fa-save"> </i>&nbsp;Enviar Consulta</button>
 
                     </div>
 
@@ -90,7 +90,7 @@
     </div>
     <div class="col-lg-6">
 
-        <h4>Ubicanos!</h4>
+        <h4>Ubícanos!</h4>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.4681187384631!2d-79.03072527086803!3d-8.114464971956897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d120d07dfbf%3A0xf5641a979fb99073!2sGEEP%20PERU%20SRL!5e0!3m2!1sen!2spe!4v1670252384822!5m2!1sen!2spe" width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
