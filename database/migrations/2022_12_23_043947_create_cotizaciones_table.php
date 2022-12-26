@@ -21,6 +21,7 @@ return new class extends Migration
             $table->double('descuento');
             $table->double('costototal');
             $table->string('estado');
+            $table->boolean('state');
             $table->timestamps();
         });
     }

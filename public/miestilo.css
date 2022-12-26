@@ -154,22 +154,28 @@
 #menu3 ul li {
     position: relative;
     float: left;
-    margin: 0;
+    margin: 0px;
     padding: 0px;
 }
 
 /* efecto al pasar el ratón por los items del menu */
 
-#menu3 ul li:hover {
-    /*  background: rgb(248, 74, 74);*/
-    color: rgb(248, 74, 74);
-}
+ 
 
 #menu3 ul ul {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 0px;
+    background: #eee;
+    padding: 0px;
+    z-index: 1;
+}
+#menu3 ul ul ul{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 200px;
     background: #eee;
     padding: 0px;
     z-index: 1;
@@ -184,6 +190,23 @@
 
 #optionmenu li{
     width: 170px;
+}
+
+#optionmenucat li{
+    width: 200px;
+
+}
+#categorias  a{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 200px;
+    font-size: 10px;
+    padding: 6px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
 }
 
     /* enlaces de los items del menu desplegable */

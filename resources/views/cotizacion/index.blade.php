@@ -23,6 +23,7 @@
 
         {!! session()->forget('respuesta') !!} {{-- borrar el error de sesión --}}
         @endif
+       
     </div>
 </div>
 <div  >
@@ -214,13 +215,19 @@
 
     $('#generarcotizacion').click(function() {
 
-        window.open( '/generarcotizacionpdf/' + idcotizacion );
-
+        //window.open( '/generarcotizacionpdf/' + idcotizacion );
+        generarcotizacion(idcotizacion);
     });
 
     $("select[name=selectestado]").change(function(e){
         table.search(e.target.value).draw();
         });
+
+   function generarcotizacion($id){
+    if($id != -1){
+    window.open( '/generarcotizacionpdf/' + $id );}
+
+   }     
 </script>
 
 

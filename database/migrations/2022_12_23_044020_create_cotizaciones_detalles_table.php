@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('producto_id'); 
             $table->double('preciototal');
             $table->foreignId('cotizacion_id'); 
-            $table->foreign('producto_id')->references('id')->on('products');
+            $table->foreign('producto_id')->references('id')->on('productos');
             $table->foreign('cotizacion_id')->references('id')->on('cotizaciones');
             $table->timestamps();
         });

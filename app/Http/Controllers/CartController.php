@@ -3,16 +3,43 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\Producto;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
+use App\Models\Subcategoria;
+use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
     public function shop()
     {
-        $products = Product::all();
+        $productos = Producto::all();
        //dd($products);
-        return view('inicio')->with(['products' => $products]);
+        return view('inicio')->with(['productos' => $productos]);
+    }
+    public function inicio()
+    {
+        //$productos = Producto::all();
+        //dd($products);
+        $categorias =Categoria::all();
+        $productos=DB::table('productos as p')
+        ->join('subcategorias as sc','p.subcategoria_id','=','sc.id')  
+        ->select(  'p.id','sc.id as idsubcategoria ','sc.categoria_id as idcategoria',
+        'p.slug','p.details','p.price','p.shipping_cost','p.description','p.subcategoria_id',
+        'p.brand_id','p.image_path','p.name' )->get() ;
+        return view('inicio2')->with(['productos' => $productos,'categorias' => $categorias]);
+    }
+    public function categorias()
+    {
+        $categorias = Categoria::all();
+       
+        return  $categorias;
+    }
+    public function subcategorias()
+    {
+        $subcategorias = Subcategoria::all();
+       
+        return  $subcategorias;
     }
 
     public function cart()  {

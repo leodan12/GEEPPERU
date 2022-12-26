@@ -95,11 +95,8 @@
                 <a>&nbsp;&nbsp;
                     CATEGORÍAS
                 </a>
-                <ul id="optionmenu">
-                    <li><a href="#">PC DE ESCRITORIO</a></li>
-                    <li><a href="#">LAPTOPS</a></li>
-                    <li><a href="#">IMPRESORAS</a></li>
-
+                <ul id="optionmenucat">
+                 
                 </ul>
             </li>
             <li id="nosotrosN">
@@ -107,9 +104,10 @@
                     NOSOTROS
                 </a>
                 <ul id="optionmenu">
-                    <li><a href="/nosotros">Quienes Somos</a></li>
-                    <li><a href="/trayectoria">Nuestra Trayectoria</a></li>
-                    <li><a href="/principios">Nuestros Principios</a></li>
+                    <li><a href="/nosotros">Quienes Somos</a>  </li>
+                    
+                    <li><a href="/trayectoria">Nuestra Trayectoria</a> </li>
+                    <li><a href="/principios">Nuestros Principios</a> </li>
 
                 </ul>
             </li>
@@ -131,7 +129,7 @@
             </li>
             <li>
                 <a>&nbsp;&nbsp;
-                    <i class="fa fa-shopping-cart"></i> {{ \Cart::getTotalQuantity()}}
+                    <i class="fa fa-shopping-cart"></i> {{ \Cart::getTotalQuantity()}} Items
                 </a>
                 <ul id="cart">
                     @include('partials.cart-drop')
@@ -306,6 +304,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
    
     @yield('script')
+    <script>
+    $(document).ready(function() {
+        $.get('/listacategorias', function(data) { 
+            for (var i = 0; i < data.length; i++) {
+                $("#optionmenucat").append('<li id="categorias"><a href="#">'+data[i].nombre+'</a> <ul id="optionmenusubcat'+data[i].id+'"> </ul> </li>');
+            }
+        });
+        $.get('/listasubcategorias', function(data) { 
+            for (var i = 0; i < data.length; i++) {
+                $('#optionmenusubcat'+data[i].categoria_id).append('<li id="subcategorias"><a href="#">'+data[i].nombre+'</a> </li>');
+            }
+        });
+    });
+    </script>
 </body>
 
 

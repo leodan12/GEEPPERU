@@ -22,6 +22,7 @@ class CotizacionesSeeder extends Seeder
             'descuento' => 99.9,
             'costototal' => 9500.05,
             'estado' => 'COTIZADO',
+            'state' => 1,
         ]);
         Cotizaciones::create([
             'fecha' => '2022-09-05',
@@ -30,6 +31,7 @@ class CotizacionesSeeder extends Seeder
             'descuento' => 89.8,
             'costototal' => 1300.08,
             'estado' => 'COTIZADO',
+            'state' => 1,
         ]);
     }
 }

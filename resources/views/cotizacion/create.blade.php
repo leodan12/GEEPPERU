@@ -78,6 +78,7 @@
                                 <tr>
                                     <th>Cantidad</th>
                                     <th>Producto</th> 
+                                    <th>Precio Total</th> 
                                     <th>Acciones</th>
                                 </tr>
                             </thead>

@@ -85,7 +85,7 @@
         </table>
         <table width="100%" class="tabla2">
             <tr>
-                <td width="11%">Señor (es):</td>
+                <td width="11%">NOMBRE:</td>
                 <td width="37%" class="linea"><span class="text">{{$cotizacion[0]->nombre}}</span></td>
                 <td width="5%">&nbsp;</td>
                 <td width="13%">&nbsp;</td>

@@ -15,7 +15,7 @@ class PdfController extends Controller
     public function cotizacion($id){
         $cotizacion=DB::table('cotizaciones as c')
         ->join('cotizaciones_detalles as cd','cd.cotizacion_id','=','c.id') 
-        ->join('products as p','cd.producto_id','=','p.id')
+        ->join('productos as p','cd.producto_id','=','p.id')
         ->select(  'c.id as idcotizacion','c.fecha','c.nombre','c.documento','c.descuento','c.costototal','c.estado'
         ,'cd.cantidad','cd.preciototal','p.name','p.price' )
         ->where('c.id','=',$id)->get()  ;
