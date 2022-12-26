@@ -118,10 +118,20 @@
 
 #menu3 ul li ul li {
     background: white;
+     
 }
 
 #menu3 ul li ul li:hover {
-    background: rgb(255, 197, 197);
+    /*background: rgb(255, 197, 197);*/
+    background: rgb(230, 21, 21);
+    color: #ffffff;
+    
+}
+#menu3 ul li ul li:hover {
+    /*background: rgb(255, 197, 197);*/
+    background: rgb(230, 21, 21);
+    color: #ffffff;
+    
 }
 
 /* enlaces del menu */
@@ -139,16 +149,16 @@
 }
 #menu3 ul li ul a {
     display: block;
-    color: #000000;
+    color: #000000; 
     text-decoration: none;
     font-weight: 200px;
-    font-size: 10px;
+    font-size: 11px;
     padding: 6px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
+ 
 /* items del menu */
 
 #menu3 ul li {
@@ -175,7 +185,7 @@
     display: none;
     position: absolute;
     top: 0%;
-    left: 200px;
+    left: 220px;
     background: #eee;
     padding: 0px;
     z-index: 1;
@@ -193,7 +203,7 @@
 }
 
 #optionmenucat li{
-    width: 200px;
+    width: 220px;
 
 }
 #categorias  a{

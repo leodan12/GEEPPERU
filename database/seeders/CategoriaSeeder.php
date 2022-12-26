@@ -19,7 +19,7 @@ class CategoriaSeeder extends Seeder
             'nombre' => 'ACCESORIOS DE COMPUTACION',
           ]);
           Categoria::create([
-            'nombre' => 'COOMPUTADORAS',
+            'nombre' => 'COMPUTADORAS',
           ]);
           Categoria::create([
             'nombre' => 'LAPTOPS',
