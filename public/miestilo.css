@@ -18,7 +18,7 @@
 }
 
 #menu ul li ul li:hover {
-    background: rgb(255, 197, 197);
+    background:#ff7673;
 }
 
 /* enlaces del menu */
@@ -59,7 +59,7 @@
 
 #menu ul li:hover {
     /*  background: rgb(248, 74, 74);*/
-    color: rgb(248, 74, 74);
+    color: #ff7673;
 }
 
 #menu ul ul {
@@ -123,13 +123,13 @@
 
 #menu3 ul li ul li:hover {
     /*background: rgb(255, 197, 197);*/
-    background: rgb(230, 21, 21);
+    background: #ff7673;
     color: #ffffff;
     
 }
 #menu3 ul li ul li:hover {
     /*background: rgb(255, 197, 197);*/
-    background: rgb(230, 21, 21);
+    background: #ff7673;
     color: #ffffff;
     
 }
@@ -263,7 +263,7 @@
 #cart {
     width: 400px; 
     padding: 0px; 
-    border-color: #9DA0A2
+    border-color: #e91f1ff5
 }
 
 #cart li {

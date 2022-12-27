@@ -21,7 +21,13 @@ class CartController extends Controller
     {
         //$productos = Producto::all();
         //dd($products);
-        $categorias =Categoria::all();
+        //$categorias =Categoria::all();
+        $categorias =DB::table('categorias as c')
+        ->join('subcategorias as sc','sc.categoria_id','=','c.id')
+        ->join('productos as p','p.subcategoria_id','=','sc.id')
+        ->select('c.id as idcategoria','c.nombre as nombre')->distinct('nombre')
+        ->get();
+
         $productos=DB::table('productos as p')
         ->join('subcategorias as sc','p.subcategoria_id','=','sc.id')  
         ->select(  'p.id','sc.id as idsubcategoria ','sc.categoria_id as idcategoria',
