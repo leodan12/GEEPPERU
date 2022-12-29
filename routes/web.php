@@ -7,7 +7,7 @@ use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CotizacionesController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\CategoriaController;
-use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\PrincipaleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ use App\Http\Controllers\PrincipalController;
 |
 */
 
-Route::get('/', [PrincipalController::class, 'inicio'])->name('inicio');
+Route::get('/', [PrincipaleController::class, 'inicio'])->name('inicio');
 Route::get('/listacategorias', [CartController::class, 'categorias'])->name('categorias');
 Route::get('/listasubcategorias', [CartController::class, 'subcategorias'])->name('subcategorias');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');

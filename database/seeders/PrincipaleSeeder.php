@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Principal;
+use App\Models\Principale;
 
-class PrincipalSeeder extends Seeder
+class PrincipaleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,22 +15,23 @@ class PrincipalSeeder extends Seeder
      */
     public function run()
     {
-        Principal::create([
+        Principale::create([
             'nombre' => 'PREMIAMOS TUS COMPRAS',
             'imagen' => 'geep.jpg',
         ]);
-        Principal::create([
+        Principale::create([
             'nombre' => 'SORTEO FIESTAS PATRIAS',
             'imagen' => '292311660_3844740_.jpg',
         ]);
-        Principal::create([
+        Principale::create([
             'nombre' => 'LA MEJOR TECNOLOGIA',
             'imagen' => 'lo_mejor.jpg',
         ]);
         
-        Principal::create([
+        Principale::create([
             'nombre' => 'SORTEO NAVIDEÑO',
             'imagen' => 'sorteo_navideño.jpg',
         ]);
+     
     }
 }

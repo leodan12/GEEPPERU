@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Principal;
+use App\Models\Principale;
 
-class PrincipalController extends Controller
+class PrincipaleController extends Controller
 {
     public function inicio()
     {
         //$principal = Principal::all();
-        $principal = Principal::orderBy('id', 'desc')->get();
+        $principal = Principale::orderBy('id', 'desc')->get();
         //dd($products);
         //$categorias =Categoria::all();
         $categorias =DB::table('categorias as c')
@@ -28,4 +28,5 @@ class PrincipalController extends Controller
         'p.brand_id','p.image_path','p.name' )->get() ;
         return view('inicio2')->with(['productos' => $productos,'categorias' => $categorias,'principal' => $principal]);
     }
+
 }
