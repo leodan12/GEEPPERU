@@ -91,7 +91,9 @@
             <li id="inicioN">
                 <a href="/">&nbsp;&nbsp; INICIO</a>
             </li>
-
+            <li>
+                <a href="#">&nbsp;&nbsp; OFERTAS</a>
+            </li>
             <li>
                 <a>&nbsp;&nbsp;
                     CATEGORÍAS
@@ -122,9 +124,7 @@
 
                 </ul>
             </li>
-            <li>
-                <a href="">&nbsp;&nbsp; OFERTAS</a>
-            </li>
+           
             <li id="contact">
                 <a href="/contactanos">&nbsp;&nbsp; CONTÁCTANOS</a>
             </li>
