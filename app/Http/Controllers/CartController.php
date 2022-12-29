@@ -11,13 +11,13 @@ use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
-    public function shop()
+   /* public function shop()
     {
         $productos = Producto::all();
        //dd($products);
         return view('inicio')->with(['productos' => $productos]);
-    }
-    public function inicio()
+    }*/
+   /* public function inicio()
     {
         //$productos = Producto::all();
         //dd($products);
@@ -34,7 +34,7 @@ class CartController extends Controller
         'p.slug','p.details','p.price','p.shipping_cost','p.description','p.subcategoria_id',
         'p.brand_id','p.image_path','p.name' )->get() ;
         return view('inicio2')->with(['productos' => $productos,'categorias' => $categorias]);
-    }
+    }*/
     public function categorias()
     {
         //$categorias = Categoria::all();

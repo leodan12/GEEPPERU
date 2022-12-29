@@ -2,25 +2,71 @@
 @section('page-info')
 <style>
  
+.imagencarrusel {
+    width: 100%;
+    height: 400px;
+} 
+
+ @media screen and (max-width: 991px) {
+    .imagencarrusel {
+        height:  300px ; 
+        width: 100% ;
+    }
+}
+@media screen and (max-width: 767px) {
+    .imagencarrusel {
+        height:  250px ; 
+        width: 100% ;
+    }
+}
+@media screen and (max-width: 480px) {
+    .imagencarrusel {
+        height:  200px ; 
+        width: 100% ;
+    }
+}
+@media screen and (max-width: 430px) {
+    .imagencarrusel {
+        height:  180px ; 
+        width: 100% ;
+    }
+}
+@media screen and (max-width: 360px) {
+    .imagencarrusel {
+        height:  150px ; 
+        width: 100% ;
+    }
+}
+
 </style>
 @endsection
 @section('content') 
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
 <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+@php $contp=0;   @endphp
+@foreach($principal as $item)
+    @if( $contp == 0)
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$contp}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+    @else
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$contp}}" aria-label="Slide 2"></button>
+    @endif 
+    @php $contp++;   @endphp
+@endforeach
+</div>
   <div class="carousel-inner">
+  @php $contp2=0;   @endphp
+    @foreach($principal as $item)
+    @if( $contp2 == 0)
     <div class="carousel-item active" data-bs-interval="4000">
-      <img src="principal/lo_mejor.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
+      <img src="principal/{{$item->imagen}}" class="d-block w-100 imagencarrusel" alt="..." >
     </div>
+    @else
     <div class="carousel-item" data-bs-interval="4000">
-      <img src="principal/sorteo_navideño.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
+      <img src="principal/{{$item->imagen}}" class="d-block w-100 imagencarrusel" alt="..."  >
     </div>
-    <div class="carousel-item" data-bs-interval="4000">
-      <img src="principal/geep.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
-    </div>
+    @endif
+    @php $contp2++;   @endphp
+    @endforeach 
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
