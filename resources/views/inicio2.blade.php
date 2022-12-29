@@ -1,131 +1,44 @@
 @extends('layout.base')
 @section('page-info')
 <style>
-.carruselc {
-    float:left;
-    width:100%;
-    overflow:hidden;
-    height:380px;
-    position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
-}
- 
-.carruselc .left-arrow {
-    position:absolute;
-    left:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-.carruselc .right-arrow {
-    position:absolute;
-    right:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
-}
- 
-#carruselp {
-    width:4000px;
-    left:0px;
-    position:absolute;
-    z-index:0;
-}
- 
-#carruselp>div {
-    float: left;
-    height: 320px;
-    margin-right: 5px;
-    width: 220px;
-    text-align:center;
-}
- 
-#carruselp img { 
-    cursor:pointer;
-    width: 160px;
-    height: 100px;
-    margin-top:10px;
-}
- 
-.product {
-    border:#CCCCCC 1px solid;
-    position: relative;
-}
-.productname{
-   color:black;
-   text-decoration:none;
-}
-.productname:hover{
-   color:red; 
-}
-
-.btnscartlist {
-    position: relative;
-}
-.btncart {
-    background-color: white;
-    position: absolute;
-   bottom: 20px;
-   left: 55px;
-   color: black;
-   border: none;
-   height: 30px;
-   border: 1px solid red;
-   border-radius: 10px;
-}
-.btncart:hover {
-   color: white;
-   background-color: red;
-}
-.btnlist {
-   position: absolute;
-   bottom: 20px;
-   left: 20px;
-   color: black;
-   height: 30px;
-   width: 30px;
-   border: 1px solid red;
-   border-radius: 5px; 
-}
-
-.btnlist:hover {
-   color: white; 
-   background-color: red;
-}
-.btnlist i {
-   position: absolute; 
-   left: 15%;
-   top: 15%;
-   font-size: 20px;
- 
-}
-
-#btncategoria {
-    color: white;
-    background-color: #ff4040; 
-    border-radius: 15px;
-    border: none;
-    height: 30px;
-}
-#price{
-    color: #191919;
-    font-weight: bold;
-    margin-top: 50px;
-    font-size: 15px;
-}
  
 </style>
 @endsection
-@section('content')
+@section('content') 
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
+      <img src="principal/lo_mejor.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="principal/sorteo_navideño.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+      <img src="principal/geep.jpg" class="d-block w-100" alt="..." width="100%" height="400px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
+ 
 @php $contc=0; @endphp
 @foreach($categorias as $cat)
 <div id="carruselc" class="carruselc">
     <a href="#" class="left-arrow" id="left_arrow_{{$cat->idcategoria}}" data-cont="{{$contc}}"><img src="carrusel/left-arrow.png" /></a>
     <a href="#" class="right-arrow" id="right_arrow_{{$cat->idcategoria}}" data-cont="{{$contc}}"><img src="carrusel/right-arrow.png" /></a>
-    <button id="btncategoria">  <b> {{$cat->nombre}} </b> </button> 
+    <button id="btncategoria" onclick="window.location.href = '/categoria-producto/{{$cat->nombre}}'" >  <b> {{$cat->nombre}} </b>  </button> 
     <hr>
     <div class="carrusel_{{$contc}}" id="carruselp">
     @php $cont=0; @endphp
@@ -133,7 +46,7 @@
     @if($pro->idcategoria == $cat->idcategoria)
         <div class="product" id="product_{{$contc}}_{{$cont}}">
             <img src="images/{{$pro->image_path}}" /> <br> <br>
-            <a href="#" class="productname">  <h5>{{ $pro->name }}</h5>  </a>  
+            <a  href="#" class="productname"  >  <h5  class="nombreproducto"  > {{ $pro->name }}</h5>  </a>  
             <span id="price">   S/{{$pro->price}}  </span>
              
             <form action="{{ route('cart.store') }}" method="POST">
@@ -147,8 +60,8 @@
                              
                                  
                                 
-                                    <a href="#"   class="btnlist"><i class="fa-solid fa-heart"></i></a>
-                                    <button class="btncart"   title="add to cart">
+                                    <a href="#" title="añadir a la lista de deseos"  class="btnlist"><i class="fa-solid fa-heart"></i></a>
+                                    <button class="btncart"   title="añadir al carrito">
                                         <i class="fa fa-shopping-cart"></i> AÑADIR AL CARRITO  
                                     </button>
                                 
@@ -174,6 +87,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
  
 <script>
+    
 var current = 0;
 var imagenes = new Array();
 /*var categorias = @json($categorias);

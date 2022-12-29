@@ -284,6 +284,7 @@
     height: 150px;
     border-radius: 100px;
 }
+/* ----------------------------------estilos de los servicios------------------------------------*/
 #servicios {
     background: -webkit-linear-gradient(
         rgba(0, 0, 0, 0.452),
@@ -363,5 +364,3 @@
 #nosotros ul a:hover {
     color: #ff0000;
 }
-
- 

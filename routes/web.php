@@ -6,6 +6,7 @@ use App\Http\Controllers\PreguntasController;
 use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CotizacionesController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\CategoriaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,3 +63,7 @@ Route::get('/cotizacion/{id}/delete', [CotizacionesController::class, 'destroy']
 Route::get('/cotizacion/show/{id}', [CotizacionesController::class, 'show']);//ver
 
 Route::get('/generarcotizacionpdf/{id}', [PdfController::class, 'cotizacion']);//ver
+
+//mostrar los productos por categorias
+Route::get('/categoria-producto/{name}',[CategoriaController::class,'categoriaproducto']);
+Route::get('/subcategoria-producto/{name}',[CategoriaController::class,'subcategoriaproducto']);

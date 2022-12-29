@@ -16,8 +16,9 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
+     <!-- mis estilos creados -->
+    <link href="{{ asset('inicio.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('miestilo.css') }}" rel="stylesheet" type="text/css" />
-	 
     <!--end::Page Vendor Stylesheets-->
 	<!--begin::Global Stylesheets Bundle(used by all pages)-->
 	<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
@@ -142,17 +143,18 @@
 
     </nav>
 
-    <div class="container ">
+    <div class="container">
 
         @yield('content')
 
     </div>
+    <br> <br>
     <!-- START FOOTER -->
     <div id="servicios">
         <br>
         <div class="container">
             <div class="row justify-content-center" style="text-align: center;">
-                <div class="col col-xs-6 col-md-3 col-sm-4 col-lg-2">
+                <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2">
                     <ul>
                         <i class="fa-solid fa-chart-line  "></i>
                         <br>
@@ -161,7 +163,7 @@
                     </ul>
 
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4 col-lg-2">
+                <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2">
                     <ul>
                         <i class="fa-solid fa-headset"></i>
                         <br>
@@ -169,7 +171,7 @@
                         <p>Contamos con personal profesional para ayudarlo</p>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4 col-lg-2">
+                <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2">
                     <ul>
                         <i class="fa-solid fa-truck"></i>
                         <br>
@@ -177,7 +179,7 @@
                         <p>Te protegemos!, por eso llegamos hasta la puerta de tu casa</p>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4 col-lg-2">
+                <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2">
                     <ul>
                         <i class="fa-solid fa-user-shield"></i>
                         <br>
@@ -185,7 +187,7 @@
                         <p>Todos nuestros productos y servicios están garantizados</p>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4 col-lg-2">
+                <div class="col-xs-12 col-sm-6 col-md-4  col-lg-2">
                     <ul>
                         <i class="fa-solid fa-lock"></i>
                         <br>
@@ -197,12 +199,14 @@
             </div>
 
         </div>
+        <hr  />
     </div>
+ 
     <div id="nosotros">
 
         <div class="container">
-            <div class="row justify-content-center" style="text-align: lefth;">
-                <div class="col col-xs-6 col-md-3 col-sm-4   ">
+            <div class="row justify-content-center" style="text-align: center;">
+                <div class="col-xs-12  col-sm-6  col-md-4 col-lg-3 ">
                     <br>
                     <h6> ¿PORQUE ELEGIRNOS?</h6>
                     <ul>
@@ -220,7 +224,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4  ">
+                <div class="col-xs-12  col-sm-6  col-md-4 col-lg-3 ">
                     <br>
                     <h6> POLÍTICAS</h6>
                     <ul>
@@ -241,7 +245,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4   ">
+                <div class="col-xs-12  col-sm-6  col-md-4 col-lg-3 ">
                     <br>
                     <h6> SERVICIOS</h6>
                     <ul>
@@ -262,7 +266,7 @@
                         </a>
                     </ul>
                 </div>
-                <div class="col col-xs-6 col-md-3 col-sm-4  ">
+                <div class="col-xs-12  col-sm-6  col-md-4 col-lg-3 ">
                     <br>
                     <h6> CONTÁCTANOS!</h6>
                     <p> Con gusto nuestros ejecutivos especializados atenderán tus dudas, recibirán tus comentarios.</p>
@@ -308,12 +312,12 @@
     $(document).ready(function() {
         $.get('/listacategorias', function(data) { 
             for (var i = 0; i < data.length; i++) {
-                $("#optionmenucat").append('<li id="categorias"><a href="#">'+data[i].nombre+'</a> <ul id="optionmenusubcat'+data[i].id+'"> </ul> </li>');
+                $("#optionmenucat").append('<li id="categorias"><a href="/categoria-producto/'+data[i].nombre+'">'+data[i].nombre+'</a> <ul id="optionmenusubcat'+data[i].idcategoria+'"> </ul> </li>');
             }
         });
         $.get('/listasubcategorias', function(data) { 
             for (var i = 0; i < data.length; i++) {
-                $('#optionmenusubcat'+data[i].categoria_id).append('<li id="subcategorias"><a href="#">'+data[i].nombre+'</a> </li>');
+                $('#optionmenusubcat'+data[i].categoria_id).append('<li id="subcategorias"><a href="/subcategoria-producto/'+data[i].nombre+'">'+data[i].nombre+'</a> </li>');
             }
         });
     });

@@ -37,14 +37,24 @@ class CartController extends Controller
     }
     public function categorias()
     {
-        $categorias = Categoria::all();
+        //$categorias = Categoria::all();
+        $categorias =DB::table('categorias as c')
+        ->join('subcategorias as sc','sc.categoria_id','=','c.id')
+        ->join('productos as p','p.subcategoria_id','=','sc.id')
+        ->select('c.id as idcategoria','c.nombre as nombre')->distinct('nombre')
+        ->get();
        
         return  $categorias;
     }
     public function subcategorias()
     {
-        $subcategorias = Subcategoria::all();
-       
+        //$subcategorias = Subcategoria::all();
+        $subcategorias =DB::table('categorias as c')
+        ->join('subcategorias as sc','sc.categoria_id','=','c.id')
+        ->join('productos as p','p.subcategoria_id','=','sc.id')
+        ->select('sc.id as idcategoria','sc.nombre as nombre','sc.categoria_id')->distinct('nombre')
+        ->get();
+
         return  $subcategorias;
     }
 
