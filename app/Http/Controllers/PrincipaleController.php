@@ -24,8 +24,8 @@ class PrincipaleController extends Controller
         $productos=DB::table('productos as p')
         ->join('subcategorias as sc','p.subcategoria_id','=','sc.id')  
         ->select(  'p.id','sc.id as idsubcategoria ','sc.categoria_id as idcategoria',
-        'p.slug','p.details','p.price','p.shipping_cost','p.description','p.subcategoria_id',
-        'p.brand_id','p.image_path','p.name' )->get() ;
+        'p.oferta','p.marca','p.price','p.porcentajedescuento','p.descripcion','p.subcategoria_id',
+        'p.stock','p.image_path','p.name' )->get() ;
         return view('inicio2')->with(['productos' => $productos,'categorias' => $categorias,'principal' => $principal]);
     }
 

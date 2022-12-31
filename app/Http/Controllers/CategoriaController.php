@@ -14,7 +14,7 @@ class CategoriaController extends Controller
     ->join('categorias as c','sc.categoria_id','=','c.id')
     ->select('p.id as idproducto', 'p.name','p.price','p.image_path',
     'c.nombre as categoria','sc.nombre as subcategoria',
-    'p.slug','p.details','p.shipping_cost','p.description','p.brand_id' )
+    'p.marca','p.oferta','p.porcentajedescuento','p.descripcion','p.stock' )
         ->where('c.nombre','=',$name) 
         ->get();
         //return  $productos ;
@@ -28,7 +28,7 @@ public function subcategoriaproducto($name){
         ->join('categorias as c','sc.categoria_id','=','c.id')
         ->select('p.id as idproducto', 'p.name','p.price','p.image_path',
         'sc.nombre as subcategoria','sc.nombre as subcategoria',
-        'p.slug','p.details','p.shipping_cost','p.description','p.brand_id' )
+        'p.marca','p.oferta','p.porcentajedescuento','p.descripcion','p.stock' )
         ->where('sc.nombre','=',$name) 
         ->get();
         //return  $productos ;

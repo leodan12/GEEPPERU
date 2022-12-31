@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->string('slug')->unique();
-            $table->string('details')->nullable();
-            $table->double('price');
-            $table->double('shipping_cost');
-            $table->text('description');
-            $table->foreignId('subcategoria_id');
-            $table->unsignedInteger('brand_id')->unsigned();
+            $table->string('name');
+            $table->string('marca'); 
+            $table->double('price'); 
+            $table->text('descripcion');
+            $table->integer('stock');
+            $table->boolean('oferta');
+            $table->integer('porcentajedescuento');
             $table->string('image_path'); 
+            $table->foreignId('subcategoria_id');
             $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
             $table->timestamps();
 

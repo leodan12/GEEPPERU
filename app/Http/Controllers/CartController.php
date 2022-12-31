@@ -75,8 +75,7 @@ class CartController extends Controller
             'price' => $request->price,
             'quantity' => $request->quantity,
             'attributes' => array(
-                'image' => $request->img,
-                'slug' => $request->slug
+                'image' => $request->img 
             )
         ));
         return redirect()->route('cart.index')->with('success_msg', 'Item Agregado a sú Carrito!');

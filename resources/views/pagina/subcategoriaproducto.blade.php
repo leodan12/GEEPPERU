@@ -39,8 +39,7 @@
       <input type="hidden" value="{{ $pro->idproducto }}" id="id" name="id">
       <input type="hidden" value="{{ $pro->name }}" id="name" name="name">
       <input type="hidden" value="{{ $pro->price }}" id="price" name="price">
-      <input type="hidden" value="{{ $pro->image_path }}" id="img" name="img">
-      <input type="hidden" value="{{ $pro->slug }}" id="slug" name="slug">
+      <input type="hidden" value="{{ $pro->image_path }}" id="img" name="img"> 
       <input type="hidden" value="1" id="quantity" name="quantity">
  
       <a href="#" title="añadir a la lista de deseos" class="btnlist"><i class="fa-solid fa-heart"></i></a>
