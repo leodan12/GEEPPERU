@@ -46,19 +46,14 @@
         color: #ffffff;
         font-size: 11px;
         font-weight: bold;
-        padding: 5px  ;
+        padding: 5px;
         position: absolute;
         top: 0;
         right: 0;
         text-transform: uppercase;
-}
-#oldprice{
-    color: #565656;
-    text-decoration: line-through;
-    margin-top: 50px;
-    font-size: 15px;
-}
+    }
 
+    
 </style>
 @endsection
 @section('content')
@@ -112,23 +107,23 @@
         @foreach($productos as $pro)
         @if($pro->idcategoria == $cat->idcategoria)
         <div class="product" id="product_{{$contc}}_{{$cont}}">
-        @if($pro->oferta == 1)
-        <div class="discount-label"> -{{$pro->porcentajedescuento}}%</div>
-        @endif
+            @if($pro->oferta == 1)
+            <div class="discount-label"> -{{$pro->porcentajedescuento}}%</div>
+            @endif
             <img src="images/{{$pro->image_path}}" /> <br> <br>
             <a href="#" class="productname">
-                <h5 class="nombreproducto" > {{ $pro->name }}%  </h5>
+                <h5 class="nombreproducto"> {{ $pro->name }}% </h5>
             </a>
 
             @if($pro->oferta == 1)
-                <span id="oldprice">  S/{{$pro->price}} </span>
-                <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
+            <span id="price"> S/{{$pro->price}} </span>
+            <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
             @endif
             @if($pro->oferta == 0)
-                 <span id="price"> S/{{$pro->price}} </span>
+            <span id="price"> S/{{$pro->price}} </span>
             @endif
 
-            
+
 
             <form action="{{ route('cart.store') }}" method="POST">
                 {{ csrf_field() }}
