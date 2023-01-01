@@ -53,6 +53,13 @@
         text-transform: uppercase;
     }
 
+    #oldprice{
+    color: #565656;
+    text-decoration: line-through;
+    margin-top: 50px;
+    font-size: 15px;
+}
+ 
     
 </style>
 @endsection
@@ -116,7 +123,7 @@
             </a>
 
             @if($pro->oferta == 1)
-            <span class="pricedescuento"> S/{{$pro->price}} </span>
+            <span class="oldprice"> S/{{$pro->price}} </span>
             <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
             @endif
             @if($pro->oferta == 0)
