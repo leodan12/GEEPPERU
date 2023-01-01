@@ -52,6 +52,12 @@
         right: 0;
         text-transform: uppercase;
 }
+#oldprice{
+    color: #565656;
+    text-decoration: line-through;
+    margin-top: 50px;
+    font-size: 15px;
+}
 
 </style>
 @endsection
