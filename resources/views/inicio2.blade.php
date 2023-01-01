@@ -123,7 +123,7 @@
             </a>
 
             @if($pro->oferta == 1)
-            <span class="oldprice"> S/{{$pro->price}} </span>
+            <span id="oldprice"> S/{{$pro->price}} </span>
             <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
             @endif
             @if($pro->oferta == 0)
