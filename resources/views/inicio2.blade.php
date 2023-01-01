@@ -1,6 +1,59 @@
 @extends('layout.base')
 @section('page-info')
-<link href="{{ asset('inicio.css') }}" rel="stylesheet" type="text/css" />
+<style>
+    .imagencarrusel {
+        width: 100%;
+        height: 400px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .imagencarrusel {
+            height: 300px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .imagencarrusel {
+            height: 250px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .imagencarrusel {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        .imagencarrusel {
+            height: 180px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .imagencarrusel {
+            height: 150px;
+            width: 100%;
+        }
+    }
+
+    .discount-label {
+        background-color: #ff3b19;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 5px  ;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-transform: uppercase;
+}
+
+</style>
 @endsection
 @section('content')
 <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
