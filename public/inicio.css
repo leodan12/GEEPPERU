@@ -114,7 +114,7 @@
     font-size: 15px;
 }
 
-#pricedescuento{
+.pricedescuento{
     color: #565656;
     text-decoration: line-through;
     margin-top: 50px;
