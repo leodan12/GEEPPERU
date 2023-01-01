@@ -2,8 +2,7 @@
 @foreach(\Cart::getContent() as $item)
 <li>
 
-    <img src="images/{{ $item->attributes->image }}" style="width: 50px; height: 50px;  ">
-    <img src="{{ asset('imgs/geepperu2.png') }}" title="geepperu" alt="geepperu" />
+    <img src="images/{{ $item->attributes->image }}" style="width: 50px; height: 50px;  "> 
     <b>{{$item->name}}</b>
     <br><small>Qty: {{$item->quantity}}</small>
 
