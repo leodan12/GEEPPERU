@@ -1,8 +1,6 @@
 @extends('layout.base')
 @section('page-info')
-<style>
-   
-</style>
+<link href="{{ asset('inicio.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
 <div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
