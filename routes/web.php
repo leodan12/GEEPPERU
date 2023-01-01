@@ -20,8 +20,8 @@ use App\Http\Controllers\PrincipaleController;
 */
 
 Route::get('/', [PrincipaleController::class, 'inicio'])->name('inicio');
-Route::get('/listacategorias', [CartController::class, 'categorias'])->name('categorias');
-Route::get('/listasubcategorias', [CartController::class, 'subcategorias'])->name('subcategorias');
+Route::get('/listacategorias', [CategoriaController::class, 'categorias'])->name('categorias');
+Route::get('/listasubcategorias', [CategoriaController::class, 'subcategorias'])->name('subcategorias');
 Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
 Route::post('/add', [CartController::class, 'add'])->name('cart.store');
 Route::post('/update', [CartController::class, 'update'])->name('cart.update');

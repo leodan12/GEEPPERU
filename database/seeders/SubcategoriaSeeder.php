@@ -28,10 +28,6 @@ class SubcategoriaSeeder extends Seeder
             'categoria_id'=>1,
           ]);
           Subcategoria::create([
-            'nombre' => 'MONITORES',
-            'categoria_id'=>1,
-          ]);
-          Subcategoria::create([
             'nombre' => 'ALL IN ONE',
             'categoria_id'=>2,
           ]);
@@ -40,15 +36,23 @@ class SubcategoriaSeeder extends Seeder
             'categoria_id'=>2,
           ]);
           Subcategoria::create([
-            'nombre' => 'NOTEBOOK',
+            'nombre' => 'PC GAMER',
+            'categoria_id'=>2,
+          ]);
+          Subcategoria::create([
+            'nombre' => 'LAPTOP NOTEBOOK',
             'categoria_id'=>3,
           ]);
           Subcategoria::create([
-            'nombre' => 'GAMER',
+            'nombre' => 'LAPTOP GAMER',
             'categoria_id'=>3,
           ]);
           Subcategoria::create([
             'nombre' => 'SILLAS',
+            'categoria_id'=>4,
+          ]);
+          Subcategoria::create([
+            'nombre' => 'LAPTOP GAMER',
             'categoria_id'=>4,
           ]);
           Subcategoria::create([
@@ -66,6 +70,18 @@ class SubcategoriaSeeder extends Seeder
           Subcategoria::create([
             'nombre' => 'DESCUENTOS',
             'categoria_id'=>6,
+          ]);
+          Subcategoria::create([
+            'nombre' => 'MONITORES',
+            'categoria_id'=>7,
+          ]);
+          Subcategoria::create([
+            'nombre' => 'PROYECTORES',
+            'categoria_id'=>7,
+          ]);
+          Subcategoria::create([
+            'nombre' => 'MOUSE',
+            'categoria_id'=>1,
           ]);
     }
 }

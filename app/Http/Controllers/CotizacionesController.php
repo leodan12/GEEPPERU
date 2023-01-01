@@ -8,7 +8,7 @@ use App\Models\Cotizaciones;
 use App\Models\CotizacionesDetalle;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
-use App\Models\Product;
+use App\Models\Producto;
 
 class CotizacionesController extends Controller
 {
@@ -25,7 +25,7 @@ class CotizacionesController extends Controller
    {
     $cotizaciones=DB::table('cotizaciones as c')
         //->join('cotizaciones_detalles as cd','cd.cotizacion_id','=','c.id') 
-        //->join('products as p','cd.producto_id','=','p.id')
+        //->join('productos as p','cd.producto_id','=','p.id')
         ->select(  'c.id as idcotizacion','c.fecha','c.nombre','c.documento','c.descuento','c.costototal','c.estado'
         //,'cd.cantidad','cd.preciototal','p.name','p.price'
         )
@@ -36,7 +36,7 @@ class CotizacionesController extends Controller
    }
    public function create()
     { 
-        $productos = Product::all();
+        $productos = Producto::all();
         
         return view("cotizacion/create" ,['productos'=>$productos]);
     }
@@ -101,7 +101,7 @@ class CotizacionesController extends Controller
    public function show($id){
     $cotizaciones=DB::table('cotizaciones as c')
         ->join('cotizaciones_detalles as cd','cd.cotizacion_id','=','c.id') 
-        ->join('products as p','cd.producto_id','=','p.id')
+        ->join('productos as p','cd.producto_id','=','p.id')
         ->select(  'c.id as idcotizacion','c.fecha as fecha','c.nombre','c.documento','c.descuento','c.costototal','c.estado'
         ,'cd.cantidad','cd.preciototal','p.name','p.price' )
         ->where('c.id','=',$id)->get()  ;
@@ -112,11 +112,11 @@ class CotizacionesController extends Controller
     {
         $cotizacion = Cotizaciones::find($id);
 
-        $productos=DB::table('products as p')->get() ;
+        $productos=DB::table('productos as p')->get() ;
 
         $detallescotizaciones=DB::table('cotizaciones_detalles as cd')
         ->join('cotizaciones as c','cd.cotizacion_id','=','c.id')
-        ->join('products as p','cd.producto_id','=','p.id')
+        ->join('productos as p','cd.producto_id','=','p.id')
         ->select(  'c.id as idcotizacion','cd.id as iddetallecotizacion','cd.producto_id as idproducto','p.name','p.price','cd.cantidad','cd.preciototal')
         ->where('c.id','=',$id)->get() ;
 

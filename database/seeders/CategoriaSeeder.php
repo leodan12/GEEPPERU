@@ -27,12 +27,14 @@ class CategoriaSeeder extends Seeder
           Categoria::create([
             'nombre' => 'GAMER',
           ]);
-           
           Categoria::create([
             'nombre' => 'IMPRESIONES',
           ]);
           Categoria::create([
             'nombre' => 'OFERTAS',
+          ]);
+          Categoria::create([
+            'nombre' => 'MONITORES Y PROYECTORES',
           ]);
     }
 }

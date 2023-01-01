@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('detalle_subcategoria_productos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('subcategoria_id');
+            $table->foreignId('producto_id');
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
+            $table->foreign('producto_id')->references('id')->on('productos');
             $table->timestamps();
         });
     }

@@ -23,8 +23,6 @@ return new class extends Migration
             $table->boolean('oferta');
             $table->integer('porcentajedescuento');
             $table->string('image_path'); 
-            $table->foreignId('subcategoria_id');
-            $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
             $table->timestamps();
 
         });
