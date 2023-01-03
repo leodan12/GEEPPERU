@@ -57,6 +57,7 @@
     margin-right: 5px;
     float: right;
     height: 80px;
+    text-align: center;
     top: 0;
     right: 0;
     white-space: pre-line;
@@ -115,6 +116,8 @@
   }
 
   .nombremasvendido1 {
+    
+    text-align: center;
     margin-top: 10px;
     width: 120px;
     margin-right: 5px;
