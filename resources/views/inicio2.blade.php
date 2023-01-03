@@ -53,16 +53,24 @@
         text-transform: uppercase;
     }
 
-    #oldprice{
-    color: #565656;
-    text-decoration: line-through;
-    margin-top: 50px;
-    font-size: 15px;
-}
- 
+    #oldprice {
+        color: #565656;
+        text-decoration: line-through;
+        margin-top: 50px;
+        font-size: 15px;
+    }
 
-
-    
+    .agotado-label {
+        background-color: #ff3b19;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+    }
 </style>
 @endsection
 @section('content')
@@ -116,19 +124,21 @@
         @foreach($productos as $pro)
         @if($pro->idcategoria == $cat->idcategoria)
         <div class="product" id="product_{{$contc}}_{{$cont}}">
-            @if($pro->oferta == 1)
-            <div class="discount-label"> -{{$pro->porcentajedescuento}}%</div>
+            @if($pro->oferta == 1 && $pro->stock > 0)
+            <div class="discount-label"> -{{$pro->porcentajedescuento}}% </div>
+            @endif
+            @if( $pro->stock == 0)
+            <div class="agotado-label"> Agotado</div>
             @endif
             <img src="images/{{$pro->image_path}}" /> <br> <br>
             <a href="#" class="productname">
-                <h5 class="nombreproducto"> {{ $pro->name }}% </h5>
+                <h5 class="nombreproducto"> {{ $pro->name }} </h5>
             </a>
 
-            @if($pro->oferta == 1)
+            @if($pro->oferta == 1 && $pro->stock > 0)
             <span id="oldprice"> S/{{$pro->price}} </span>&nbsp;
-            <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
-            @endif
-            @if($pro->oferta == 0)
+            <span id="price"> S/{{number_format($pro->price - (($pro->price*$pro->porcentajedescuento)/100), 2);}} </span>
+            @else
             <span id="price"> S/{{$pro->price}} </span>
             @endif
 
@@ -141,19 +151,23 @@
 
                 <input type="hidden" value="{{ $pro->image_path }}" id="img" name="img">
                 @if($pro->oferta == 1)
-                <input type="hidden" value="{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}}" id="price" name="price">
+                <input type="hidden" value="{{number_format($pro->price - (($pro->price*$pro->porcentajedescuento)/100), 2);}}" id="price" name="price">
                 @endif
                 @if($pro->oferta == 0)
                 <input type="hidden" value="{{$pro->price}}" id="price" name="price">
                 @endif
                 <input type="hidden" value="1" id="quantity" name="quantity">
 
-
-
-                <a href="#" title="añadir a la lista de deseos" class="btnlist"><i class="fa-solid fa-heart"></i></a>
+                <a href="#" title="Añadir a la lista de deseos" class="btnlist"><i class="fa-solid fa-heart"></i></a>
+                @if( $pro->stock == 0)
+                <a href="#" title="Ver Producto" class="btnver">
+                    <p> &nbsp; <i class="fa-solid fa-eye"></i> VER PRODUCTO &nbsp;</p>
+                </a>
+                @else
                 <button class="btncart" title="añadir al carrito">
                     <i class="fa fa-shopping-cart"></i> AÑADIR AL CARRITO
                 </button>
+                @endif
 
 
             </form>
@@ -196,7 +210,7 @@
                 currentc[j] = 0;
             }
             if ($contc <= 5) {
-                console.log($contc);
+                //console.log($contc);
                 $('#right_arrow_' + categorias[j].idcategoria).css('display', 'none');
                 $('#left_arrow_' + categorias[j].idcategoria).css('display', 'none');
             }
@@ -217,23 +231,7 @@
             return false;
         });
 
-        /*$('.left-arrow').on('hover', function() {
-        $cont = $(this).data("cont");
-        $('#right_arrow_'+$cont).css('opacity','0.5');
-        //$(this).css('opacity','0.5');
-    }, function() {
-        $(this).css('opacity','1');
-    });
- 
-    $('.right-arrow').on('hover', function() {
-        $cont = $(this).data("cont");
-        $('#right_arrow_'+$cont).css('opacity','0.5');
-        //$(this).css('opacity','0.5');
        
-    }, function() {
-        $(this).css('opacity','1');
-    });*/
-
         $('.right-arrow').on('click', function() {
             $cont = $(this).data("cont");
 

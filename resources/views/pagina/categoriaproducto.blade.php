@@ -171,19 +171,31 @@
     text-transform: uppercase;
   }
 
-  #price2{
+  #price2 {
     color: #ed5e35;
     font-weight: bold;
     margin-top: 10px;
     font-size: 12px;
-}
+  }
 
-#oldprice2{
+  #oldprice2 {
     color: #565656;
     text-decoration: line-through;
     margin-top: 10px;
     font-size: 12px;
-}
+  }
+
+  .agotado-label {
+    background-color: #ff3b19;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+  }
 </style>
 @endsection
 @section('content')
@@ -201,16 +213,20 @@
       <hr>
       @foreach($masvendidos as $pro)
       <div class="colmasvendidos">
-        @if($pro->oferta == 1)
+        @if($pro->oferta == 1 && $pro->stock > 0)
         <div class="discount-label1"> -{{$pro->porcentajedescuento}}%</div>
         @endif
-        <img class="imagenmasvendido" src="../images/{{$pro->image_path}}" alt="Producto" width="100%" height="140px">
-        <h5 class="nombremasvendido">{{$pro->name}}</h5>
-        @if($pro->oferta == 1)
-        <span id="oldprice2"> S/{{$pro->price}} </span> 
-        <span id="price2"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
+        @if( $pro->stock == 0)
+        <div class="discount-label1"> Agotado</div>
         @endif
-        @if($pro->oferta == 0)
+        <img class="imagenmasvendido" src="../images/{{$pro->image_path}}" alt="Producto" width="100%" height="140px">
+        <a href="#" class="productname ">
+                <h5 class="nombremasvendido"> {{ $pro->name }} </h5>
+        </a>
+        @if($pro->oferta == 1 && $pro->stock > 0)
+        <span id="oldprice2"> S/{{$pro->price}} </span>
+        <span id="price2"> S/{{number_format($pro->price - (($pro->price*$pro->porcentajedescuento)/100), 2);}} </span>
+        @else
         <span id="price2"> S/{{$pro->price}} </span>
         @endif
       </div>
@@ -223,29 +239,44 @@
     @foreach($productos as $pro)
     <div class=" product">
       <img src="../images/{{$pro->image_path}}" alt="Producto" width="100%" height="140px">
-      @if($pro->oferta == 1)
+      @if($pro->oferta == 1 && $pro->stock > 0)
       <div class="discount-label"> -{{$pro->porcentajedescuento}}%</div>
       @endif
-      <h5 class="nombreproducto">{{$pro->name}}</h5>
-      @if($pro->oferta == 1)
-      <span id="oldprice"> S/{{$pro->price}} </span> &nbsp;
-      <span id="price"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
+      @if( $pro->stock == 0)
+      <div class="agotado-label"> Agotado</div>
       @endif
-      @if($pro->oferta == 0)
+      <a href="#" class="productname nombreproducto">
+                <h5 class="nombreproducto"> {{ $pro->name }} </h5>
+      </a>
+      @if($pro->oferta == 1 && $pro->stock > 0)
+      <span id="oldprice"> S/{{$pro->price}} </span> &nbsp;
+      <span id="price2"> S/{{number_format($pro->price - (($pro->price*$pro->porcentajedescuento)/100), 2);}} </span>
+      @else
       <span id="price"> S/{{$pro->price}} </span>
       @endif
       <form action="{{ route('cart.store') }}" method="POST">
         {{ csrf_field() }}
         <input type="hidden" value="{{ $pro->idproducto }}" id="id" name="id">
         <input type="hidden" value="{{ $pro->name }}" id="name" name="name">
-        <input type="hidden" value="{{ $pro->price }}" id="price" name="price">
+        @if($pro->oferta == 1)
+        <input type="hidden" value="{{number_format($pro->price - (($pro->price*$pro->porcentajedescuento)/100), 2);}}" id="price" name="price">
+        @endif
+        @if($pro->oferta == 0)
+        <input type="hidden" value="{{$pro->price}}" id="price" name="price">
+        @endif
         <input type="hidden" value="{{ $pro->image_path }}" id="img" name="img">
         <input type="hidden" value="1" id="quantity" name="quantity">
 
         <a href="#" title="añadir a la lista de deseos" class="btnlist"><i class="fa-solid fa-heart"></i></a>
+        @if( $pro->stock == 0)
+        <a href="#" title="Ver Producto" class="btnver">
+          <p> &nbsp; <i class="fa-solid fa-eye"></i> VER PRODUCTO &nbsp;</p>
+        </a>
+        @else
         <button class="btncart" title="añadir al carrito">
           <i class="fa fa-shopping-cart"></i> AÑADIR AL CARRITO
         </button>
+        @endif
 
 
       </form>
@@ -263,16 +294,21 @@
       <hr>
       @foreach($masvendidos as $pro)
       <div class="colmasvendidos1">
-        @if($pro->oferta == 1)
+      @if($pro->oferta == 1 && $pro->stock > 0)
         <div class="discount-label1"> -{{$pro->porcentajedescuento}}%</div>
         @endif
+        @if( $pro->stock == 0)
+        <div class="agotado-label"> Agotado</div>
+        @endif
         <img class="imagenmasvendido1" src="../images/{{$pro->image_path}}" alt="Producto" width="100%" height="140px">
-        <h5 class="nombremasvendido1">{{$pro->name}}</h5>
-        @if($pro->oferta == 1)
+        
+        <a href="#" class="productname ">
+                <h5 class="nombremasvendido1"> {{ $pro->name }} </h5>
+            </a>
+        @if($pro->oferta == 1  && $pro->stock > 0)
         <span id="oldprice2"> S/{{$pro->price}} </span> &nbsp;
         <span id="price2"> S/{{$pro->price - (($pro->price*$pro->porcentajedescuento)/100)}} </span>
-        @endif
-        @if($pro->oferta == 0)
+        @else
         <span id="price2"> S/{{$pro->price}} </span>
         @endif
       </div>

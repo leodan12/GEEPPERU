@@ -91,7 +91,7 @@
                 <a href="/">&nbsp;&nbsp; INICIO</a>
             </li>
             <li>
-                <a href="#">&nbsp;&nbsp; OFERTAS</a>
+                <a href="../categoria-producto/OFERTAS">&nbsp;&nbsp; OFERTAS</a>
             </li>
             <li>
                 <a>&nbsp;&nbsp;

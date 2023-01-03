@@ -19,7 +19,7 @@ class ProductosTableSeeder extends Seeder
             'name' => 'LAPTOP HP PAVILION 15-EC2501LA RYZEN 5- 5600H 4.2GHZ 8GB 256GB-SSD GTX-1650 4GB 15.6″',
             'marca' => 'HP',
             'descripcion' => '15 pulgadas, 1TB HDD, 32GB RAM',
-            'price' => 3429,
+            'price' => 3429.00,
             'oferta' => 1,
             'porcentajedescuento' => 10,
             'stock' => 10,
@@ -62,7 +62,7 @@ class ProductosTableSeeder extends Seeder
             'name' => 'AURICULAR MSI IMMERSER GH30-V2',
             'marca' => 'MSI',
             'descripcion' => 'AURICULAR MSI IMMERSER GH30-V2',
-            'price' => 179.0,
+            'price' => 179.00,
             'oferta' => 1,
             'porcentajedescuento' => 10,
             'stock' => 0,
@@ -88,7 +88,7 @@ class ProductosTableSeeder extends Seeder
             'oferta' => 1,
             'porcentajedescuento' => 10,
             'stock' => 4,
-            'image_path' => 'CAM-TEROS-720P.fw_.png'
+            'image_path' => 'CAM-TEROS-720P.png'
         ]);
         Producto::create([
             'name' => 'MONITOR LED TEROS 27″ TE-3178N IPS QHD 75HZ 2MS FLAT FHD',
@@ -137,7 +137,7 @@ class ProductosTableSeeder extends Seeder
             'price' => 59.00,
             'oferta' => 1,
             'porcentajedescuento' => 5,
-            'stock' => 20,
+            'stock' => 0,
             'image_path' => 'D_NQ_NP_2X_819698-MLA45269545145_032021-V.webp'
         ]); 
         Producto::create([

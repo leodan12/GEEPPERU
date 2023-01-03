@@ -98,7 +98,29 @@
    font-size: 20px;
  
 }
+.btnver {
+    background-color: white;
+    position: absolute;
+   bottom: 20px;
+   left: 55px;
+   color: black;
+   border: none;
+   height: 30px;
+   border: 1px solid red;
+   border-radius: 10px;
+   text-decoration:none;
+   margin-left: 10px;
+   margin-right: 10px;
+   text-align: center; 
+}
 
+.btnver p{
+margin-top: 5px;
+}
+.btnver:hover {
+   color: white;
+   background-color: #ff3936;
+}
 #btncategoria {
     color: white;
     background-color: #ff4040; 
