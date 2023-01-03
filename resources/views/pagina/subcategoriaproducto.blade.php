@@ -68,7 +68,7 @@
 
   .viewproductos {
     text-align: center;
-    width: 74%;
+    width: 75%;
     right: 0px;
     margin-left: 10px;
     float: right;
