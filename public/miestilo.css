@@ -1,15 +1,16 @@
 #menu ul {
     list-style: none;
     padding: 0px;
-    background: -webkit-linear-gradient(red, black);
-    background: -moz-linear-gradient(red, black);
-    background: -o-linear-gradient(red, black);
-    background: linear-gradient(red, black);
+    background: -webkit-linear-gradient(red,#191919);
+    background: -moz-linear-gradient(red, #191919);
+    background: -o-linear-gradient(red, #191919);
+    background: linear-gradient(red, #191919);
     border: 1px solid #353535;
 }
 
 #menu {
     height: 20px;
+    
 }
 /* items del menu */
 
@@ -27,8 +28,8 @@
     display: block;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 10px;
+    font-weight: bold;
+    font-size: 10px; 
     padding: 0px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -96,10 +97,10 @@
 #menu3 ul {
     list-style: none;
     padding: 35px;
-    background: -webkit-linear-gradient(black, red);
-    background: -moz-linear-gradient(black, red);
-    background: -o-linear-gradient(black, red);
-    background: linear-gradient(black, red);
+    background: -webkit-linear-gradient(rgb(26, 24, 24), red);
+    background: -moz-linear-gradient(rgb(26, 24, 24), red);
+    background: -o-linear-gradient(rgb(26, 24, 24), red);
+    background: linear-gradient(rgb(26, 24, 24), red);
     border: 1px solid #353535; 
 }
 
@@ -127,12 +128,7 @@
     color: #ffffff;
     
 }
-#menu3 ul li ul li:hover {
-    /*background: rgb(255, 197, 197);*/
-    background: #ff7673;
-    color: #ffffff;
-    
-}
+ 
 
 /* enlaces del menu */
 
@@ -140,7 +136,7 @@
     display: block;
     color: #ffffff;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 12px;
     padding: 0px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -364,4 +360,7 @@
     color: #ff0000;
 }
 
- 
+.espacio {
+    margin-left: 50px;
+    margin-right: 50px;
+}

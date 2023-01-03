@@ -33,8 +33,7 @@
 	@yield('page-info')
 	
     <title>GEEPPERU</title>
-
-
+ 
 </head>
 
 <body id="kt_body"    class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
@@ -143,10 +142,10 @@
 
     </nav>
 
-    <div class="container">
-
+    <div class="container-fluid">
+        <div class="espacio"> 
         @yield('content')
-
+        </div>
     </div>
     <br> <br>
     <!-- START FOOTER -->

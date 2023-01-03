@@ -20,11 +20,23 @@ class CategoriaController extends Controller
             ->where('c.nombre','=',$namec)  
             ->get();
 
+            $masvendidos = DB::table('productos as p')
+            ->join('detalle_subcategoria_productos as dsp','dsp.producto_id','=','p.id')
+            ->join('subcategorias as sc','dsp.subcategoria_id','=','sc.id')
+            ->join('categorias as c','sc.categoria_id','=','c.id')
+            ->select('p.id as idproducto', 'p.name','p.price','p.image_path',
+            'c.nombre as categoria','sc.nombre as subcategoria',
+            'p.marca','p.oferta','p.porcentajedescuento','p.descripcion','p.stock' )
+            ->distinct('p.id')
+            ->take(5)
+            ->where('c.nombre','=',$namec)  
+            ->get();
+
     $unique_productos = $productos->unique('idproducto');
 
 
-                //return  $productos ;
-    return view("pagina/categoriaproducto",['productos' => $unique_productos]);
+                //return  $masvendidos ;
+    return view("pagina/categoriaproducto",['productos' => $unique_productos,'masvendidos' => $masvendidos]);
         
 }
 
@@ -38,8 +50,20 @@ public function subcategoriaproducto($name){
         'p.marca','p.oferta','p.porcentajedescuento','p.descripcion','p.stock' )
         ->where('sc.nombre','=',$name)->distinct('name') 
         ->get();
+        
+        $masvendidos = DB::table('productos as p')
+            ->join('detalle_subcategoria_productos as dsp','dsp.producto_id','=','p.id')
+            ->join('subcategorias as sc','dsp.subcategoria_id','=','sc.id')
+            ->join('categorias as c','sc.categoria_id','=','c.id')
+            ->select('p.id as idproducto', 'p.name','p.price','p.image_path',
+            'c.nombre as categoria','sc.nombre as subcategoria',
+            'p.marca','p.oferta','p.porcentajedescuento','p.descripcion','p.stock' )
+            ->distinct('p.id')
+            ->take(5)
+            ->where('sc.nombre','=',$name)  
+            ->get();
         //return  $productos ;
-        return view("pagina/subcategoriaproducto",['productos' => $productos]);
+        return view("pagina/subcategoriaproducto",['productos' => $productos ,'masvendidos' => $masvendidos]);
         
 }
 public function categorias()
