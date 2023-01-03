@@ -18,19 +18,23 @@ class PrincipaleSeeder extends Seeder
         Principale::create([
             'nombre' => 'PREMIAMOS TUS COMPRAS',
             'imagen' => 'geep.jpg',
+            'estado' => 1,
         ]);
         Principale::create([
             'nombre' => 'SORTEO FIESTAS PATRIAS',
             'imagen' => '292311660_3844740_.jpg',
+            'estado' => 1,
         ]);
         Principale::create([
             'nombre' => 'LA MEJOR TECNOLOGIA',
             'imagen' => 'lo_mejor.jpg',
+            'estado' => 1,
         ]);
         
         Principale::create([
             'nombre' => 'SORTEO NAVIDEÑO',
-            'imagen' => 'sorteo_navideño.jpg',
+            'imagen' => 'sorteo-navideño.jpg',
+            'estado' => 1,
         ]);
      
     }
