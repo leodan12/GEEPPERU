@@ -69,10 +69,12 @@ Route::get('/generarcotizacionpdf/{id}', [PdfController::class, 'cotizacion']);/
 Route::get('/categoria-producto/{name}',[CategoriaController::class,'categoriaproducto']);
 Route::get('/subcategoria-producto/{name}',[CategoriaController::class,'subcategoriaproducto']);
 
-//mostrar los productos por categorias
+//administrar el baner principal
 Route::get('/principal/index', [PrincipaleController::class, 'index']);//Registrar
 Route::get('/principal/show/{id}', [PrincipaleController::class, 'show']);//ver
 Route::get('/principal/create',[PrincipaleController::class,'create']);
 Route::post('/principal/store', [PrincipaleController::class, 'store']);//Registrar
 Route::get('/principal/{id}/delete', [PrincipaleController::class, 'destroy']);//Actualizar
 
+//mostrar el detalle de los productos 
+Route::get('/producto/{name}', [PrincipaleController::class, 'detalleproducto']);//Actualizar
